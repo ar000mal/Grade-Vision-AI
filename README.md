@@ -92,7 +92,10 @@ Export grading reports as PDF
 Admin dashboard for managing uploaded sheets
 
 🤝 Contributors
-Aromal Prasad – Developer, ML Integrator, UI/UX
+Aromal Prasad 
+Arjun Satheesh
+Maharaja Hari Arjun
+Alfin Muhammed
 
 📄 License
 This project is licensed under the MIT License.
