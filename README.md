@@ -79,10 +79,10 @@ The AI grades the answers based on content, correctness, and diagrams.
 
 Graded marks, feedback, and optional section logic are processed and displayed.
 
-📌 Example Use Case
+### 📌 Example Use Case
 Teachers, institutions, or auto-evaluation systems can use Grade Vision AI to speed up exam evaluations by uploading handwritten sheets and receiving structured and accurate grading reports.
 
-🧠 Future Enhancements
+### 🧠 Future Enhancements<br>
 Add support for multiple answer scripts at once
 
 Include optical mark recognition (OMR) for MCQs
@@ -91,22 +91,18 @@ Export grading reports as PDF
 
 Admin dashboard for managing uploaded sheets
 
-🤝 Contributors
-Aromal Prasad 
-Arjun Satheesh
-Maharaja Hari Arjun
-Alfin Muhammed
+### 🤝 Contributors
+Aromal Prasad <br>
+Arjun Satheesh <br>
+Maharaja Hari Arjun <br>
+Alfin Muhammed <br>
 
 📄 License
-This project is licensed under the MIT License.
+<i>This project is licensed under the MIT License.</i>
 
 yaml
 Copy code
 
 ---
 
-Let me know:
-- If you want this saved as a file or uploaded.
-- If you’d like to add screenshots or a demo video section.
-- If you want this saved as a file or uploaded.
-- If you’d like to add screenshots or a demo video section.
+
