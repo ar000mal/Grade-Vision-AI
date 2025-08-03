@@ -67,6 +67,8 @@ Copy code
 python app.py
 Open your browser at http://127.0.0.1:5000/
 
+---
+
 ### 🧪 How It Works
 Upload scanned images of the question paper and the answer sheet.
 
@@ -78,14 +80,20 @@ The AI grades the answers based on content, correctness, and diagrams.
 
 Graded marks, feedback, and optional section logic are processed and displayed.
 
+---
+
 ### 📌 Example Use Case
 Teachers, institutions, or auto-evaluation systems can use Grade Vision AI to speed up exam evaluations by uploading handwritten sheets and receiving structured and accurate grading reports.
+
+---
 
 ### 🧠 Future Enhancements<br>
 Add support for multiple answer scripts at once
 Include optical mark recognition (OMR) for MCQs
 Export grading reports as PDF
 Admin dashboard for managing uploaded sheets
+
+---
 
 ### 🤝 Contributors
 <p>Aromal Prasad <br>
