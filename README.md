@@ -89,7 +89,7 @@ Export grading reports as PDF
 Admin dashboard for managing uploaded sheets
 
 ### 🤝 Contributors
-Aromal Prasad <br>
+<p>Aromal Prasad <br>
 Arjun Satheesh <br>
 Maharaja Hari Arjun <br>
 Alfin Muhammed <br>
