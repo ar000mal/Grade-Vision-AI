@@ -92,7 +92,6 @@ Admin dashboard for managing uploaded sheets
 Arjun Satheesh <br>
 Maharaja Hari Arjun <br>
 Alfin Muhammed <br></p>
----
 
 📄 License
 <i>This project is licensed under the MIT License.</i>
