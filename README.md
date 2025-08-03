@@ -47,28 +47,28 @@ Copy code
 
 ## ⚙️ Setup Instructions
 
-### 1. Clone the Repo
-```bash
+#### 1. Clone the Repo
+
 git clone https://github.com/yourusername/grade-vision-ai.git
 cd grade-vision-ai/ExamGraderFinal
-2. Install Dependencies
+#### 2. Install Dependencies
 bash
 Copy code
 pip install -r requirements.txt
-3. Configure Environment
+#### 3. Configure Environment
 Create a .env file with your Google Generative AI API key:
 
 ini
 Copy code
 GOOGLE_API_KEY=your_api_key_here
 UPLOAD_FOLDER=uploads
-4. Run the App
+#### 4. Run the App
 bash
 Copy code
 python app.py
 Open your browser at http://127.0.0.1:5000/
 
-🧪 How It Works
+### 🧪 How It Works
 Upload scanned images of the question paper and the answer sheet.
 
 The system extracts raw text from both images using Gemini.
@@ -106,5 +106,7 @@ Copy code
 ---
 
 Let me know:
+- If you want this saved as a file or uploaded.
+- If you’d like to add screenshots or a demo video section.
 - If you want this saved as a file or uploaded.
 - If you’d like to add screenshots or a demo video section.
