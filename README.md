@@ -40,8 +40,7 @@ ExamGraderFinal/
 ├── requirements.txt # Python dependencies
 ├── .env # API keys and environment variables
 
-yaml
-Copy code
+
 
 ---
 
@@ -92,7 +91,7 @@ Admin dashboard for managing uploaded sheets
 <p>Aromal Prasad <br>
 Arjun Satheesh <br>
 Maharaja Hari Arjun <br>
-Alfin Muhammed <br>
+Alfin Muhammed <br></p>
 ---
 
 📄 License
