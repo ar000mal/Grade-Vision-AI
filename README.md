@@ -84,11 +84,8 @@ Teachers, institutions, or auto-evaluation systems can use Grade Vision AI to sp
 
 ### 🧠 Future Enhancements<br>
 Add support for multiple answer scripts at once
-
 Include optical mark recognition (OMR) for MCQs
-
 Export grading reports as PDF
-
 Admin dashboard for managing uploaded sheets
 
 ### 🤝 Contributors
@@ -96,13 +93,10 @@ Aromal Prasad <br>
 Arjun Satheesh <br>
 Maharaja Hari Arjun <br>
 Alfin Muhammed <br>
+---
 
 📄 License
 <i>This project is licensed under the MIT License.</i>
 
-yaml
-Copy code
-
----
 
 
