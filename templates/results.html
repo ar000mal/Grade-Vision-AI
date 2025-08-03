@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grading Results</title>
+    <link rel="stylesheet" href="/static/css/results.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grading Results</h1>
+
+<div id="results-container">
+        <div class="summary-card">
+            <h2>Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <span class="label">Total Marks</span>
+                    <span class="value">{{ total_marks if total_marks is not none else 0 }}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Obtained Marks</span>
+                    <span class="value">{{ "%.1f"|format(obtained_marks) if obtained_marks is not none else 0 }}</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Percentage</span>
+                    <span class="value">
+                        {% if total_marks and total_marks > 0 %}
+                            {{ "%.1f"|format(obtained_marks / total_marks * 100) }}%
+                        {% else %}
+                            0%
+                        {% endif %}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Marks</th>
+                        <th>Extracted Answer</th>
+                        <th>Acquired Marks</th>
+                        <th>Feedback</th>
+                        <th>Original Grade</th>
+                        <th>Optional</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                    <tr class="{{ 'contributing' if result.contributes_to_total else 'non-contributing' }}">
+                        <td class="question-cell">
+                            <strong>{{ result.question_number }}.</strong>
+                            {% if result.question_text %}
+                                <div class="question-text">{{ result.question_text }}</div>
+                            {% endif %}
+                        </td>
+                        <td class="marks-cell">{{ result.allocated_marks }}</td>
+                        <td class="answer-cell">
+                            {% if result.answer %}
+                                <div class="answer-text">{{ result.answer }}</div>
+                                {% if result.answer.graph_data %}
+                                    <div class="graph-data">
+                                        <pre>{{ result.answer.graph_data.ascii_representation }}</pre>
+                                        <pre>{{ result.answer.graph_data.json_data | tojson(indent=4) }}</pre>
+                                    </div>
+                                {% endif %}
+                            {% endif %}
+                        </td>
+                        <td class="acquired-marks-cell">
+                            <div class="marks-value">{{ "%.1f"|format(result.acquired_marks) }}</div>
+                            {% if result.is_optional %}
+                                {% if result.contributes_to_total %}
+                                    <div class="marks-status counted">Counted</div>
+                                {% else %}
+                                    <div class="marks-status not-counted {% if result.acquired_marks == 0 %}zero{% endif %}">Not Counted</div>
+                                {% endif %}
+                            {% endif %}
+                        </td>
+                        <td class="feedback-cell">
+                            <div class="feedback-content">{{ result.feedback }}</div>
+                        </td>
+                        <td class="grade-cell">{{ result.original_grade }}</td>
+                        <td class="optional-cell">{{ "Yes" if result.is_optional else "No" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="/static/js/results.js"></script>
+</body>
+</html>

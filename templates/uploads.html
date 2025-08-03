@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGS | Upload Documents</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/uploads.css">
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="grid-background"></div>
+    
+    <div id="deleteArea" class="delete-area">
+        <i class="fas fa-trash-alt"></i>
+        <span class="delete-text">Drop to Delete</span>
+    </div>
+
+    <nav class="navbar">
+        <a href="/" class="brand">Grade Vision AI</a>
+    </nav>
+
+    <main class="container">
+        <div class="upload-header">
+            <h1>Document Upload</h1>
+            <p class="subtitle">Drag and drop your exam documents for AI-powered grading</p>
+        </div>
+
+        <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="drop-zones-container">
+                <div class="drop-zone" id="questionPapersDropZone">
+                    <div class="drop-zone-content">
+                        <div class="drop-zone-icon">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <label for="questionPapers">Question Papers</label>
+                        <p class="drop-zone-hint">Drag & drop or click to upload</p>
+                        <input type="file" id="questionPapers" name="question_papers" multiple hidden>
+                    </div>
+                    <div id="questionPapersPreview" class="preview-container"></div>
+                    <div class="image-count" id="questionPapersCount">0 files</div>
+                </div>
+
+                <div class="drop-zone" id="answerSheetsDropZone">
+                    <div class="drop-zone-content">
+                        <div class="drop-zone-icon">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <label for="answerSheets">Answer Sheets</label>
+                        <p class="drop-zone-hint">Drag & drop or click to upload</p>
+                        <input type="file" id="answerSheets" name="answer_sheets" multiple hidden>
+                    </div>
+                    <div id="answerSheetsPreview" class="preview-container"></div>
+                    <div class="image-count" id="answerSheetsCount">0 files</div>
+                </div>
+            </div>
+
+            <div class="grading-options">
+                <label for="gradingDifficulty">Grading Difficulty:</label>
+                <select id="gradingDifficulty" name="grading_difficulty">
+                    <option value="liberal">Liberal</option>
+                    <option value="normal">Normal</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            
+            <div class="drop-zones-container">
+                <div class="drop-zone" id="referencesDropZone">
+                    <div class="drop-zone-content">
+                        <div class="drop-zone-icon">
+                            <i class="fas fa-file-upload"></i>
+                        </div>
+                        <label for="references">Reference Materials</label>
+                        <p class="drop-zone-hint">Drag & drop or click to upload</p>
+                        <input type="file" id="references" name="references" multiple hidden>
+                    </div>
+                    <div id="referencesPreview" class="preview-container"></div>
+                    <div class="image-count" id="referencesCount">0 files</div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">
+                <span class="button-text">Process Documents</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </form>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">×</span>
+        <img class="modal-content" id="fullSizeImage">
+    </div>
+
+    <script src="/static/js/uploads.js"></script>
+</body>
+</html>

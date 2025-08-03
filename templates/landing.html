@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Vision AI </title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="grid-background"></div>
+    
+    <main class="hero">
+        <div class="hero-content">
+            
+            <div class="title-container">
+                <h1 class="title">
+                    <span class="title-intro">Welcome to the</span>
+                    <span id="typed-text" class="title-main"></span>
+                </h1>
+            </div>
+            <p class="description">Experience the future of academic assessment through artificial intelligence and machine learning</p>
+            
+            <div class="cta-container">
+                <a href="/uploads" class="cta-primary">
+                    <span class="cta-text">Launch Platform</span>
+                    <div class="cta-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </div>
+                </a>
+                
+                <div class="cta-secondary">
+                    <div class="stat">
+                        <span class="stat-value">93.7%</span>
+                        <span class="stat-label">Accuracy</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">500ms</span>
+                        <span class="stat-label">Response</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="geometric-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="floating-elements">
+        <div class="float float-1">AI Powered</div>
+        <div class="float float-2">Real-time Analysis</div>
+        <div class="float float-3">Smart Feedback</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+</body>
+</html>
